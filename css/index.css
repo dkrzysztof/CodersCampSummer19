@@ -1,16 +1,25 @@
+:root{
+    --border-color: rgb(252, 165, 53);
+    --box-shadow: 0px 0px 15px 5px rgba(200,200,200,0.3);
+    --box-shadow-hover: 0px 15px 25px 10px rgba(104, 104, 104, 0.4);
+}
+
 .top-tile{
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding-top:100px;
+    padding-bottom: 100px;
     display: flex;
     justify-content: center;
     justify-items: center;
     background-image: url(https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 
-.box{
+.holder{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -18,22 +27,27 @@
 
 @media (min-width: 1200px){
     .top-tile{
-        background-size: 100vw auto;
         height: 800px;
     }
-}
-
-@media (min-width: 1000px) and (max-width: 1200px){
-    .top-tile{
-        background-size: 100vw auto;    
+    .list-element:not(:last-child){
+        border-right: 3px dashed var(--border-color);
     }
 }
 
-@media (max-width: 1000px){
+@media (min-width: 991px) and (max-width: 1200px){
+    .list-element:not(:last-child){
+        border-right: 3px dashed var(--border-color);
+        border-bottom: 0px;
+    }
+}
+
+@media (max-width: 991px){
     .top-tile{
-        background-size: auto 100vh;
         padding-left: 50px;
         padding-right: 50px;
+    }
+    .list-element:not(:last-child){
+        border-bottom: 3px dashed var(--border-color);
     }
 }
 
@@ -55,3 +69,109 @@
     background-color: black;
     height: 2px;
 }
+
+.skill-tile{
+    width: 100%;
+    padding: 5% 10%;
+}
+
+.list-container{
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    height: 100%;
+
+}
+
+div.list-element{
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+    padding: 5% 2%;
+}
+
+.icon{
+    width: 100%;
+    text-align: center;
+    font-size: 1.1em;
+    font-family: 'Crete Round', serif;
+}
+.icon p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+}
+
+i + h4{
+    margin: 1.25em 0 0.5em;
+}
+
+.offert-tile{
+    height: 125vh;
+    width: 100vw;
+    padding: 5% 10%;
+}
+
+.offert-title{
+    height: 15%;
+    margin: 5% 15%;
+    position: relative;
+    box-shadow: var(--box-shadow);
+    border-bottom: 4px solid #ff4a4a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2em;
+    font-family: 'Crete Round', serif;
+}
+
+.offert-body{
+    margin: 5% 2%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+    margin-left: 15px;
+    margin-bottom: 50px;
+    display: flex;
+    font-size: 2em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    transition: box-shadow 0.3s, border-bottom 0.2s ease-out,
+    transform 0.3s ease-out, background-color 0.5s, color 0.5s;
+}
+
+.box:hover, .box:focus{
+    box-shadow: var(--box-shadow-hover);
+}
+
+.box:first-child:hover, .box:first-child:focus{
+    border-bottom: 5px solid #ff3030;
+}
+
+.box:nth-child(2):hover, .box:first-child:focus{
+    border-bottom: 5px solid #FFC500;
+}
+
+.box:nth-child(3):hover, .box:first-child:focus{
+    border-bottom: 5px solid #252525;
+}
+
+.box:nth-child(4):hover, .box:first-child:focus{
+    border-bottom: 5px solid #002395;
+}
+
+.box:nth-child(5):hover, .box:first-child:focus{
+    border-bottom: 5px solid #009246;
+}
+
+.box:nth-child(6):hover, .box:first-child:focus{
+    transform: scale(1.1);
+    background-color: #25252569;
+}
+

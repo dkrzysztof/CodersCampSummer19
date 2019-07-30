@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Crete+Round|Open+Sans&display=swap');
+:root{
+    font-size: 18px;
+}
 
 body{
     font-family: 'Open Sans', serif;
     background-color: hsl(0,0%,15%);
     margin:0;
-    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 a.navbar-brand{
@@ -17,14 +21,15 @@ li.nav-item{
 }
 
 div.dropdown-menu{
- font-size: 18px;
+ font-size: 1em;
 }
 
-.box{
+.holder{
     background-color: rgba(255,255,255,0.95);
     position: relative;
+    height: auto;
     top: 0;
-    margin: 15% 30% 10%; 
+    margin: 50px 30% auto; 
     padding: 2em 4em;
     border-radius: 30px;
 }
@@ -33,7 +38,7 @@ nav{
     -webkit-box-shadow: 0px -30px 24px 30px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px -30px 24px 30px rgba(0,0,0,0.75);
     box-shadow: 0px -30px 24px 30px rgba(0,0,0,0.75);
-    font-size: 20px;
+    font-size: 0.9rem;
 }
 
 #logo{

@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./css/index.css">
   
   <!-- standardowe źródła -->
+  <script src="https://kit.fontawesome.com/12722d3b6e.js"></script>
   <link rel="stylesheet" type="text/css" href="master.css">
   <link rel="shortcut icon" href="./images/logo-blue.png" type="image/png">
   <link rel="icon" href="./images/logo-blue.png" type="image/png">
@@ -18,7 +19,7 @@
 
 <body>
   <!-- Pasek nawigacyjny -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top"> 
     <div class="container">
       <a class="navbar-brand" href="../index.html"><img src="../images/logo_min.png" id="logo" /></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingItems" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,11 +39,11 @@
               <a class="dropdown-item" href="#">Angielski</a>
               <a class="dropdown-item" href="#">Hiszpański</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item disabled" href="#">Wkrótce</a>
+              <a class="dropdown-item disabled" href="#">Więcej..</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../pages/LearningProgram.html">Program nauczania</a>
+            <a class="nav-link" href="#skill-tile">Program nauczania</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../pages/About.html">O nas</a>
@@ -57,12 +58,67 @@
 
   <!-- Górna płytka -->
   <div class="top-tile">
-        <div class="box">
+        <div class="holder">
           <div id="title">International Talking School</div>
           <hr class="hr-style"/>
           <h3 id="text">Internetowe korepetycje z doświadczonymi nauczycielami, gotowymi zacząć naukę z tobą od zaraz!</h3>
           <a class="btn btn-outline-danger btn-lg" href="#">Zaczynam naukę!</a>
         </div>
+  </div>
+
+  <!-- Umiejętności -->
+  <div class="skill-tile" id="skill-tile">
+    <div class="list-container row">
+      <div class="col-lg list-element">
+        <div class="icon">
+          <i class="fas fa-user-graduate fa-3x"></i>
+          <h4>Profesjonalni nauczyciele</h4>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur excepturi ipsam eaque odio quaerat voluptatum magni.
+            </p>
+        </div>
+      </div>
+      <div class="list-element col-lg">
+        <div class="icon">
+            <i class="fas fa-laptop fa-3x"></i>
+            <h4>Zdalne nauczanie</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum reiciendis dicta.
+            </p>
+        </div>
+      </div>
+      <div class="col-lg list-element">
+        <div class="icon">
+          <i class="fas fa-graduation-cap fa-3x"></i>
+          <h4>Certyfikat ukończenia</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis assumenda necessitatibus est.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Języki oferta -->
+  <div class="offert-tile">
+    <!-- Tytuł -->
+    <div class="offert-title">
+      Nasza Oferta
+    </div>
+    
+    <!-- Treść -->
+    <div class="offert-body">
+      <div class="box" 
+        style="background-image: url(https://images.unsplash.com/photo-1464021025634-49b81a77a858?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80) no-repeat cover / center center;"
+      >
+        Angielski
+      </div>
+      <div class="box">Hiszpański</div>
+      <div class="box">Niemiecki</div>
+      <div class="box">Francuski</div>
+      <div class="box">Włoski</div>
+      <div class="box">Więcej już wkrótce...</div>
+    </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

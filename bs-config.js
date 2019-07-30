@@ -16,7 +16,7 @@ module.exports = {
     "ui": {
         "port": 3001
     },
-    "tunnel": "its-dev" ,
+    "tunnel": "its-dev",
     "files": [],
     "watchEvents": [
         "change"
