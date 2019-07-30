@@ -1,5 +1,5 @@
 :root{
-    --border-color: rgb(252, 165, 53);
+    --border-color: #fca535;
     --box-shadow: 0px 0px 15px 5px rgba(200,200,200,0.3);
     --box-shadow-hover: 0px 15px 25px 10px rgba(104, 104, 104, 0.4);
 }
@@ -50,6 +50,27 @@
         border-bottom: 3px dashed var(--border-color);
     }
 }
+@media (min-width: 1100px){
+    .left-box{
+        height: auto;
+        width: 40%;
+    }
+    .right-box{
+        height: auto;
+        width: 60%;
+    }
+}
+@media (max-width: 1100px){
+    .contact-container{
+        flex-direction: column-reverse;
+    }
+    .left-box{
+        height: auto;
+    }
+    .right-box{
+        height: auto;
+    }
+}
 
 #title{
     font-family: 'Crete Round', serif;
@@ -63,11 +84,11 @@
 }
 
 .hr-style{
-    /* border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); */
-    background-color: black;
-    height: 2px;
+    height: 0;
+    width: 95%;  
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .skill-tile{
@@ -76,10 +97,11 @@
 }
 
 .list-container{
+    margin: 5% auto 5px;
     background-color: white;
     box-shadow: var(--box-shadow);
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
 
 }
 
@@ -106,21 +128,22 @@ i + h4{
 }
 
 .offert-tile{
-    height: 125vh;
+    height: auto;
     width: 100vw;
-    padding: 5% 10%;
+    padding: 1% 10%;
 }
 
 .offert-title{
-    height: 15%;
-    margin: 5% 15%;
+    height: auto;
+    margin: 5% 15% 7%;
+    padding: 1%;
     position: relative;
     box-shadow: var(--box-shadow);
     border-bottom: 4px solid #ff4a4a;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.2em;
+    font-size: 2.2rem;
     font-family: 'Crete Round', serif;
 }
 
@@ -128,7 +151,7 @@ i + h4{
     margin: 5% 2%;
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .box{
@@ -150,28 +173,130 @@ i + h4{
     box-shadow: var(--box-shadow-hover);
 }
 
+/* Język angielski */
 .box:first-child:hover, .box:first-child:focus{
     border-bottom: 5px solid #ff3030;
 }
 
+/* Język hiszpański */
 .box:nth-child(2):hover, .box:first-child:focus{
     border-bottom: 5px solid #FFC500;
 }
 
+/* Język niemiecki */
 .box:nth-child(3):hover, .box:first-child:focus{
     border-bottom: 5px solid #252525;
 }
 
+/* Język francuski */
 .box:nth-child(4):hover, .box:first-child:focus{
-    border-bottom: 5px solid #002395;
+    border-bottom: 5px solid #1b64d1;
 }
 
+/* Język włoski */
 .box:nth-child(5):hover, .box:first-child:focus{
-    border-bottom: 5px solid #009246;
+    border-bottom: 5px solid #0f9751;
+}
+
+/* Zapowiedź innych języków */
+.box:nth-child(6){
+    background-color: #adadad69;
 }
 
 .box:nth-child(6):hover, .box:first-child:focus{
-    transform: scale(1.1);
-    background-color: #25252569;
+    transform: scale(1.05);
+    background-color: #fff;
 }
 
+.contact-tile{
+    height: auto;
+    width: 100vw;
+    padding: 5% 5% 1%;
+    margin-bottom: 1%;
+    background-color: #f7f7f72a;
+}
+
+.contact-title{
+    width: fit-content;
+    margin-left: 1em;
+    margin-bottom: 3%;
+    padding: 2% 4% 1.5%;
+    font-size: 2.2rem;
+    font-family: 'Crete Round', serif;
+    /* font-weight: 600;
+    letter-spacing: 1px; */
+    background-color: white;
+    border-bottom: 4px solid #ff9a3d;
+    box-shadow: var(--box-shadow);
+}
+
+.contact-container{
+    height: auto;
+    width: 100%;
+    background-color: #bdbdbd3d;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left-box{
+    padding: 3% 5%;
+    background-color: #fdb14de6;
+    color:white;
+    font-size: 1.2em;
+    position: relative;
+}
+
+#fa-paper-plane{
+    color:white;
+}
+
+.bottom-text{
+    position: relative;
+    margin-top: 20%;
+    bottom: 0;
+    padding-bottom: 5%;
+}
+
+i + span{
+    margin-left: 1em;
+}
+
+#span-email{
+    font-size: 0.9em;
+}
+
+.contact-hr{
+    height: 0;
+    border: 1px solid white;
+    background-color: white;
+}
+
+.links{
+    height:auto;
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.right-box{
+    background-color: #f1f1f1;
+}
+
+footer {
+    height: auto;
+    margin-top: 2%;
+    width: 100vw;
+    font-size: 0.85rem;
+    font-family: 'Crete Round', serif;
+    background-color: #fdb14de6;
+    color: white;
+}
+
+footer p{
+    width: fit-content;
+    margin: 2px auto 4px ;
+    letter-spacing: 1px;
+}

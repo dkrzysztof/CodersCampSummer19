@@ -19,51 +19,48 @@
 
 <body>
   <!-- Pasek nawigacyjny -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top"> 
+  <!-- fixed top below  -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="../index.html"><img src="../images/logo_min.png" id="logo" /></a>
+      <a class="navbar-brand" href="#top-tile"><img src="../images/logo_min.png" id="logo" /></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingItems" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
       <div class="collapse navbar-collapse" id="collapsingItems">
         <ul class="navbar-nav mr-auto justify-content-center">
           <li class="nav-item">
-            <a class="nav-link" href="../index.html">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#top-tile">Home<span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Oferta
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Angielski</a>
-              <a class="dropdown-item" href="#">Hiszpański</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item disabled" href="#">Więcej..</a>
-            </div>
+          <li class="nav-item">
+            <a class="nav-link" href="#offert-tile" >Oferta</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#skill-tile">Program nauczania</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../pages/About.html">O nas</a>
+            <a class="nav-link" href="#about">O nas</a>
           </li>
         </ul>
         <ul class="navbar-nav navbar-right">
-          <li class="nav-item nav-active"><a class="nav-link" href="../pages/Contact.html">Kontakt</a></li>
+          <li class="nav-item nav-active"><a class="nav-link" href="#contact-form">Kontakt</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Górna płytka -->
-  <div class="top-tile">
+  <div class="top-tile" id="top-tile">
         <div class="holder">
           <div id="title">International Talking School</div>
           <hr class="hr-style"/>
           <h3 id="text">Internetowe korepetycje z doświadczonymi nauczycielami, gotowymi zacząć naukę z tobą od zaraz!</h3>
-          <a class="btn btn-outline-danger btn-lg" href="#">Zaczynam naukę!</a>
+          <a class="btn btn-outline-danger btn-lg" href="#contact-form">Zaczynam naukę!</a>
         </div>
+  </div>
+
+  <div class="about-tile">
+
   </div>
 
   <!-- Umiejętności -->
@@ -99,6 +96,8 @@
     </div>
   </div>
 
+  <hr class="hr-style" id="offert-tile"/>
+
   <!-- Języki oferta -->
   <div class="offert-tile">
     <!-- Tytuł -->
@@ -120,6 +119,55 @@
       <div class="box">Więcej już wkrótce...</div>
     </div>
   </div>
+
+  <!-- Formularz kontaktowy -->
+  <div class="contact-tile" id="contact-form">
+    <div class="contact-title">
+      Skontaktuj się z nami!
+    </div>
+    <div class="contact-container">
+      <div class="left-box">
+          <i class="far fa-paper-plane fa-3x" id="fa-paper-plane"></i>
+          <hr class="contact-hr">
+          <div class="top-text">
+            Napisz do nas, a jeden z naszych konsultantów, odezwie się do ciebie!
+            Zachęcamy również do kontaktu telefonicznego.
+          </div>
+          <div class="bottom-text">
+            Polska, Zielona Góra <br/>
+            Wojska Polskiego 9 <br/>
+            <i class="fas fa-phone"></i><span>(+48) 790 404 067 </span><br/>
+            <i class="far fa-envelope"></i><span id="span-email">iternational.talking@gmail.com</span><br/>
+            <hr class="contact-hr">
+            <div class="links">
+              <a href="https://www.e-korepetycje.net/international-talking" style="width:fit-content"><img src="../images/e-korepetycje.svg" alt="e-korepetycje" style="width: 50%" class="link-img"></a>
+            </div>
+          </div>
+      </div>
+      <div class="right-box">
+        <form action="get">
+          <label for="name">Imię</label>
+          <input type="text" name="name" placeholder="Imię i Nazwisko">
+          <br>
+          <label for="topic">Tytuł</label>
+          <input type="text" name="topic" placeholder="Temat np. 'Korepetycje' ">
+          <br>
+          <label for="email">email</label>
+          <input type="email" name="email" placeholder="E-mail">
+          <br>
+          <label for="text">Treść</label>
+          <input type="text" name="text" placeholder="Treść wiadomości...">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stopka -->
+  <!-- <footer class="others-tile">
+    <p>
+    Autor strony: Krzysztof Dydak. Wszystkie prawa zastrzeżone.
+    </p>
+  </footer> -->
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
