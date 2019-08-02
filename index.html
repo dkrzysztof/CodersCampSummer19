@@ -39,7 +39,7 @@
             <a class="nav-link" href="#skill-tile">Program nauczania</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about">O nas</a>
+            <a class="nav-link" href="#about-tile">O nas</a>
           </li>
         </ul>
         <ul class="navbar-nav navbar-right">
@@ -58,13 +58,39 @@
           <a class="btn btn-outline-danger btn-lg" href="#contact-form">Zaczynam naukę!</a>
         </div>
   </div>
+  <!-- O nas  -->
+  <div class="contact-tile" id="about-tile">
+    <div class="contact-title">
+      O nas
+    </div>
+    <div class="offert-body" id="about-body">
+      <div class="about-box"><span class="strong-text">International Talking School</span> to szkoła stworzona z pasji do uczenia się i nauczania języków
+        obcych. Jej planem jest zrzeszać ludzi z całego świata by robili to, co potrafią i kochają najbardziej, czyli NAUCZANIE JĘZYKÓW OBCYCH i TŁUMACZENIA PISEMNE I USTNE
+      </div>
+      <div class="about-box"><span class="strong-text"></span>
+          Nasi lektorzy to osoby posiadające wieloletnie doświadczenie w nauczaniu i udokumentowany najwyższy poziom biegłości językowej :
 
-  <div class="about-tile">
-
+          - native speakerzy z wykształceniem filologicznym,
+          
+          - absolwenci kierunków filologicznych,
+          
+          - certyfikowani nauczyciele języków obcych.  
+      </div>
+      <div class="about-box">
+          Nauczają opierając się na materiałach „ż życia wziętych” , takich jak artykuły, magazyny, książki, filmy, podcasty . 
+      </div>
+      <div class="about-box">
+          Pomagają w przełamaniu bariery językowej, zrozumieniu zawiłej gramatyki i umiejętnym jej stosowaniu, prowadzą konwersacje, przygotowują do certyfikatów, Matury, Egzaminu Gimnazjalnego ,Testu Szóstoklasisty, a także do rozmowy o pracę w języku obcym.
+      </div>
+      <div class="about-box">
+        Dla nich każdy jest w stanie nauczyć się języka obcego. Do każdego indywidualnie dopasowują materiały, charakter zajęć i plan nauki.
+      </div>
+    </div>
   </div>
 
   <!-- Umiejętności -->
   <div class="skill-tile" id="skill-tile">
+    <div class="contact-title">Co gwarantujemy?</div>
     <div class="list-container row">
       <div class="col-lg list-element">
         <div class="icon">
@@ -121,8 +147,8 @@
   </div>
 
   <!-- Formularz kontaktowy -->
-  <div class="contact-tile" id="contact-form">
-    <div class="contact-title">
+  <div class="contact-tile">
+    <div class="contact-title" id="contact-form">
       Skontaktuj się z nami!
     </div>
     <div class="contact-container">
@@ -130,8 +156,8 @@
           <i class="far fa-paper-plane fa-3x" id="fa-paper-plane"></i>
           <hr class="contact-hr">
           <div class="top-text">
-            Napisz do nas, a jeden z naszych konsultantów, odezwie się do ciebie!
-            Zachęcamy również do kontaktu telefonicznego.
+            Jeśli jesteś ambitna/y, pracowita/y i zmotywowana/y do pracy, skontaktuj się z nami,
+            a pokażemy Ci jak w sposób szybki, łatwy i przyjemny nauczyć się języka.
           </div>
           <div class="bottom-text">
             Polska, Zielona Góra <br/>
@@ -145,30 +171,71 @@
           </div>
       </div>
       <div class="right-box">
-        <form action="get">
-          <label for="name">Imię</label>
-          <input type="text" name="name" placeholder="Imię i Nazwisko">
-          <br>
-          <label for="topic">Tytuł</label>
-          <input type="text" name="topic" placeholder="Temat np. 'Korepetycje' ">
-          <br>
-          <label for="email">email</label>
-          <input type="email" name="email" placeholder="E-mail">
-          <br>
-          <label for="text">Treść</label>
-          <input type="text" name="text" placeholder="Treść wiadomości...">
-        </form>
+        <form autocomplete="off">
+          <div class="justify">
+              <label for="name">Name:</label> 
+              <input 
+                  type="text" 
+                  class="input" 
+                  id="name" 
+                  placeholder="Your name" 
+                  onfocus="highligh_text(event)" 
+                  onfocusout="unhighlight_text(event)"
+                  name="fname"
+                  tabindex="1"
+                  required>
+          </div>
+          <div class="justify">
+              <label for="surname">Surname:</label>    
+              <input 
+                  type="text" 
+                  class="input" 
+                  id="surname" 
+                  placeholder="Your surname" 
+                  onfocus="highligh_text(event)"
+                  onfocusout="unhighlight_text(event)"
+                  name="lname"
+                  tabindex="2"
+                  required>
+          </div>
+          <div class="justify">
+              <label for="email">Email:</label> 
+              <input 
+                  type="email" 
+                  class="input" 
+                  id="email" 
+                  placeholder="Your email" 
+                  onfocus="highligh_text(event)" 
+                  onfocusout="unhighlight_text(event)"
+                  tabindex="3"
+                  required>    
+          </div>
+          <div class="justify" style="height:25%;">
+              <label for="message">Message:</label>    
+              <textarea 
+                  type="text" 
+                  class="input" 
+                  id="message" 
+                  placeholder="Your message" 
+                  onfocus="highligh_text(event)" 
+                  onfocusout="unhighlight_text(event)"
+                  tabindex="4" 
+                  autocomplete="off"
+                  required></textarea>
+          </div>
+          <input class="btn-submit" tabindex="4" type="submit">
+      </form>
       </div>
     </div>
   </div>
 
   <!-- Stopka -->
-  <!-- <footer class="others-tile">
+  <footer class="others-tile">
     <p>
     Autor strony: Krzysztof Dydak. Wszystkie prawa zastrzeżone.
     </p>
-  </footer> -->
-
+  </footer>
+  <script src="./scripts/master.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>

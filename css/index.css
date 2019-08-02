@@ -32,12 +32,18 @@
     .list-element:not(:last-child){
         border-right: 3px dashed var(--border-color);
     }
+    .about-box{
+        width: 35%;
+    }
 }
 
 @media (min-width: 991px) and (max-width: 1200px){
     .list-element:not(:last-child){
         border-right: 3px dashed var(--border-color);
         border-bottom: 0px;
+    }
+    .about-box{
+        width: 35%;
     }
 }
 
@@ -49,6 +55,9 @@
     .list-element:not(:last-child){
         border-bottom: 3px dashed var(--border-color);
     }
+    .about-box{
+        width: 80%;
+    }
 }
 @media (min-width: 1100px){
     .left-box{
@@ -58,6 +67,9 @@
     .right-box{
         height: auto;
         width: 60%;
+    }
+    form{
+        padding-top: 10%;
     }
 }
 @media (max-width: 1100px){
@@ -69,6 +81,7 @@
     }
     .right-box{
         height: auto;
+        margin-bottom: 10%;
     }
 }
 
@@ -90,7 +103,23 @@
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
+/* about tile */
+#about-body{
+    padding: 3% 5%;
 
+}
+.strong-text{
+    font-family: 'Crete Round',serif;
+    text-decoration: bold;
+    font-size: 1.2rem;
+}
+.about-box{
+    margin: 3% 5%;
+    padding: 2% 4%;
+    box-shadow: var(--box-shadow);
+}
+
+/* skill tile */
 .skill-tile{
     width: 100%;
     padding: 5% 10%;
@@ -126,6 +155,8 @@ div.list-element{
 i + h4{
     margin: 1.25em 0 0.5em;
 }
+
+/* OFFERT TILE */
 
 .offert-tile{
     height: auto;
@@ -208,6 +239,8 @@ i + h4{
     background-color: #fff;
 }
 
+/* CONTACT TILE */
+
 .contact-tile{
     height: auto;
     width: 100vw;
@@ -233,10 +266,14 @@ i + h4{
 .contact-container{
     height: auto;
     width: 100%;
-    background-color: #bdbdbd3d;
+    background-color: #fffdfd;
     display: flex;
     flex-wrap: wrap;
+    
+    box-shadow: var(--box-shadow);
 }
+
+/* LEFT BOX */
 
 .left-box{
     padding: 3% 5%;
@@ -282,9 +319,91 @@ i + span{
 }
 
 .right-box{
-    background-color: #f1f1f1;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
+/* RIGHT BOX */
+
+form{
+    --main-color: #fbb75c;
+    --secondary-color: #2196f3;
+    --unselected-color: black;
+    color: black;
+    width: 550px;
+    height: 100%;
+    font-family: 'Open Sans';
+}
+
+.justify{
+    width: 100%;
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 5% 0;
+}
+
+label{
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.input{
+    background-color: transparent;
+    border:none;
+    transition: 0.3s ease;
+    width: 70%;
+    border-bottom: 2px solid var(--unselected-color);
+}
+
+.input:focus{
+    border-bottom: 4px solid var(--secondary-color);
+    outline-width: 0;
+    margin: 12px 0;
+}
+
+#message{
+    height: 100%;
+    width: 70%;
+    border: 2px solid var(--unselected-color);
+    background-color: transparent;
+    resize: none;
+    border-radius: 5px;
+    font-size: 0.98em;
+    padding: 2px 15px;
+    font-family: inherit;
+}
+
+#message:focus{
+    border: 2px solid var(--secondary-color);
+}
+
+.btn-submit{
+    width: 100%;
+    height: 10%;
+    border: 2px solid black ;
+    border-radius: 15px;
+    background-color: transparent;
+    font-size: 1.3em;
+    outline-width: 0;
+    transition: 0.4s ease;
+}
+.btn-submit:hover, .btn-submit:focus{
+    background-color: var(--main-color);
+    color:white;
+    font-weight: 600;
+}
+
+.btn-submit:active{
+    position: relative;
+    top: 3px;
+}
+
+
+/* FOOTER */
 footer {
     height: auto;
     margin-top: 2%;
