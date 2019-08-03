@@ -32,7 +32,7 @@ div.dropdown-menu{
 }
 
 .holder{
-    background-color: rgba(255,255,255,0.95);
+    background-color: rgba(255,255,255,0.9);
     position: relative;
     height: auto;
     top: 0;
@@ -52,4 +52,8 @@ nav{
 #logo{
     width: 50px;
     height: auto;
+}
+
+.ccontainer{
+    padding: 2% 5%;
 }

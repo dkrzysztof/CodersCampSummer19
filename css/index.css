@@ -13,7 +13,7 @@
     display: flex;
     justify-content: center;
     justify-items: center;
-    background-image: url(https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+    background-image: url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -23,6 +23,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.tile-title{
+    width: fit-content;
+    margin: 1% auto 3% 1em;
+    padding: 2% 4% 1.5%;
+    font-size: 2.2rem;
+    font-family: 'Crete Round', serif;
+    background-color: white;
+    border-bottom: 4px solid #ff9a3d;
+    box-shadow: var(--box-shadow);
 }
 
 @media (min-width: 1200px){
@@ -71,6 +82,15 @@
     form{
         padding-top: 10%;
     }
+    .about-body{
+        font-size: 1.1rem;
+    }
+    #first-container    { width: 28%; }
+    #second-container   { width: 31%; }
+    #third-container    { width: 35%; }
+    #fourth-container   { width: 32%; }
+    #fifth-container    { width: 30%; }
+    #sixth-container    { width: 32%; }
 }
 @media (max-width: 1100px){
     .contact-container{
@@ -82,6 +102,12 @@
     .right-box{
         height: auto;
         margin-bottom: 10%;
+    }
+
+    div.about-body > div{
+        width: 100%;
+        padding: 15%;
+        font-size: 1.5rem;
     }
 }
 
@@ -95,6 +121,11 @@
     text-align: center;
     margin-bottom: 25px;
 }
+.title-in-text{
+    font-family: 'Crete Round',serif;
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+}
 
 .hr-style{
     height: 0;
@@ -104,20 +135,44 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 /* about tile */
-#about-body{
-    padding: 3% 5%;
+.about-tile{
+    height: auto;
+    width: 100vw;
+    margin: 1% 0;
+}
+.about-tile .tile-title{
+    border-bottom: 4px solid #ff4a4a;
+}
+.about-body{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: justify;
+}
 
-}
-.strong-text{
-    font-family: 'Crete Round',serif;
-    text-decoration: bold;
-    font-size: 1.2rem;
-}
 .about-box{
-    margin: 3% 5%;
-    padding: 2% 4%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;    
+    margin:1%;
     box-shadow: var(--box-shadow);
 }
+
+#second-container{
+    background-image: url(https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);
+}
+
+#fourth-container{
+    background-image: url(https://images.unsplash.com/photo-1482059470115-0aadd6bf6834?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+}
+
+#sixth-container{
+    background-image: url(https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+    background-position: bottom;
+}
+
 
 /* skill tile */
 .skill-tile{
@@ -138,7 +193,7 @@ div.list-element{
     box-sizing: border-box;
     width: auto;
     height: auto;
-    padding: 5% 2%;
+    padding: 3%;
 }
 
 .icon{
@@ -164,20 +219,10 @@ i + h4{
     padding: 1% 10%;
 }
 
-.offert-title{
-    height: auto;
-    margin: 5% 15% 7%;
-    padding: 1%;
-    position: relative;
-    box-shadow: var(--box-shadow);
+.offert-tile .tile-title{
     border-bottom: 4px solid #ff4a4a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.2rem;
-    font-family: 'Crete Round', serif;
 }
-
+ 
 .offert-body{
     margin: 5% 2%;
     display:flex;
@@ -247,20 +292,6 @@ i + h4{
     padding: 5% 5% 1%;
     margin-bottom: 1%;
     background-color: #f7f7f72a;
-}
-
-.contact-title{
-    width: fit-content;
-    margin-left: 1em;
-    margin-bottom: 3%;
-    padding: 2% 4% 1.5%;
-    font-size: 2.2rem;
-    font-family: 'Crete Round', serif;
-    /* font-weight: 600;
-    letter-spacing: 1px; */
-    background-color: white;
-    border-bottom: 4px solid #ff9a3d;
-    box-shadow: var(--box-shadow);
 }
 
 .contact-container{
@@ -410,6 +441,7 @@ footer {
     width: 100vw;
     font-size: 0.85rem;
     font-family: 'Crete Round', serif;
+    text-align: center;
     background-color: #fdb14de6;
     color: white;
 }
