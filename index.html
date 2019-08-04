@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="./css/index.css">
   
   <!-- standardowe źródła -->
-  <script src="https://kit.fontawesome.com/12722d3b6e.js"></script>
   <link rel="stylesheet" type="text/css" href="master.css">
   <link rel="shortcut icon" href="./images/logo-blue.png" type="image/png">
   <link rel="icon" href="./images/logo-blue.png" type="image/png">
@@ -43,7 +42,7 @@
           </li>
         </ul>
         <ul class="navbar-nav navbar-right">
-          <li class="nav-item nav-active"><a class="nav-link" href="#contact-form">Kontakt</a></li>
+          <li class="nav-item nav-active"><a class="nav-link" href="#contact-tile">Kontakt</a></li>
         </ul>
       </div>
     </div>
@@ -89,7 +88,7 @@
     </div>
   </div>
 
-  <hr class="hr-style" id="offert-tile"/>
+  <hr class="hr-style"/>
 
   <!-- Umiejętności -->
   <div class="tile" id="skill-tile">
@@ -126,10 +125,10 @@
     </div>
   </div>
 
-  <hr class="hr-style" id="offert-tile"/>
+  <hr class="hr-style"/>
 
   <!-- Języki oferta -->
-  <div class="tile">
+  <div class="tile" id="offert-tile">
     <!-- Tytuł -->
     <div class="tile-title">
       Nasza Oferta
@@ -148,10 +147,10 @@
     </div>
   </div>
 
-  <hr class="hr-style" id="offert-tile"/>
+  <hr class="hr-style"/>
 
   <!-- Formularz kontaktowy -->
-  <div class="tile">
+  <div class="tile" id="contact-tile">
     <div class="tile-title" id="contact-form">
       Skontaktuj się z nami!
     </div>
@@ -176,8 +175,8 @@
       </div>
       <div class="right-box">
         <form class="form" autocomplete="off">
-          <div class="justify">
-              <label for="name">Imię:</label> 
+          <div class="form-justify-content">
+              <label class="form-label" for="name">Imię:</label> 
               <input 
                   type="text" 
                   class="input" 
@@ -189,8 +188,8 @@
                   tabindex="1"
                   required>
           </div>
-          <div class="justify">
-              <label for="surname">Nazwisko:</label>    
+          <div class="form-justify-content">
+              <label class="form-label" for="surname">Nazwisko:</label>    
               <input 
                   type="text" 
                   class="input" 
@@ -202,8 +201,8 @@
                   tabindex="2"
                   required>
           </div>
-          <div class="justify">
-              <label for="email">Email:</label> 
+          <div class="form-justify-content">
+              <label class="form-label" for="email">Email:</label> 
               <input 
                   type="email" 
                   class="input" 
@@ -214,12 +213,13 @@
                   tabindex="3"
                   required>    
           </div>
-          <div class="justify" style="height:25%;">
-              <label for="message">Wiadomość:</label>    
+          <div class="form-justify-content" style="height:25%;">
+              <label class="form-label" for="message">Wiadomość:</label>    
               <textarea 
                   type="text" 
                   class="input" 
-                  id="message" 
+                  id="message"
+                  class="form-text-area"
                   placeholder="Your message" 
                   onfocus="highligh_text(event)" 
                   onfocusout="unhighlight_text(event)"
@@ -234,7 +234,7 @@
   </div>
 
   <!-- Stopka -->
-  <footer class="others-tile">
+  <footer>
     <p>
     Autor strony: Krzysztof Dydak. Wszystkie prawa zastrzeżone.
     </p>
@@ -243,4 +243,5 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/12722d3b6e.js"></script>
 </html>
