@@ -24,10 +24,16 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+.tile{
+    height: auto;
+    width: 100vw;
+    padding: 2% 5%;
+    margin: 0;
+}
 
 .tile-title{
     width: fit-content;
-    margin: 1% auto 3% 1em;
+    margin: 2% auto 4% 1em;
     padding: 2% 4% 1.5%;
     font-size: 2.2rem;
     font-family: 'Crete Round', serif;
@@ -36,6 +42,7 @@
     box-shadow: var(--box-shadow);
 }
 
+/* FIRST MEDIA TYPE */
 @media (min-width: 1200px){
     .top-tile{
         height: 800px;
@@ -70,6 +77,8 @@
         width: 80%;
     }
 }
+
+/* SECOND MEDIA TYPE */
 @media (min-width: 1100px){
     .left-box{
         height: auto;
@@ -115,11 +124,27 @@
     font-family: 'Crete Round', serif;
     text-align: center;
     font-size: 2.5em;
+    color:black;
+    animation-name: Gradient;
+    animation-delay: 2s;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    text-shadow: 0 0 1px black;
+}
+
+
+@keyframes Gradient{
+    0%      { color: #ff4a4a }
+    25%     { color: #fca535; }
+    50%     { color: #0f9751 }
+    75%     { color: #1b64d1 }
+    100%    { color: #ff4a4a }
 }
 
 #text{
     text-align: center;
     margin-bottom: 25px;
+    
 }
 .title-in-text{
     font-family: 'Crete Round',serif;
@@ -134,13 +159,14 @@
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-/* about tile */
-.about-tile{
-    height: auto;
-    width: 100vw;
-    margin: 1% 0;
+
+/* ABOUT TILE */
+#about-tile{
+    margin: 2% 0 2%;
+    padding: 0;
 }
-.about-tile .tile-title{
+
+#about-tile .tile-title{
     border-bottom: 4px solid #ff4a4a;
 }
 .about-body{
@@ -173,13 +199,7 @@
     background-position: bottom;
 }
 
-
 /* skill tile */
-.skill-tile{
-    width: 100%;
-    padding: 5% 10%;
-}
-
 .list-container{
     margin: 5% auto 5px;
     background-color: white;
@@ -212,19 +232,12 @@ i + h4{
 }
 
 /* OFFERT TILE */
-
-.offert-tile{
-    height: auto;
-    width: 100vw;
-    padding: 1% 10%;
-}
-
-.offert-tile .tile-title{
+#offert-tile .tile-title{
     border-bottom: 4px solid #ff4a4a;
 }
  
 .offert-body{
-    margin: 5% 2%;
+    margin: 0 2%;
     display:flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -244,40 +257,27 @@ i + h4{
     transition: box-shadow 0.3s, border-bottom 0.2s ease-out,
     transform 0.3s ease-out, background-color 0.5s, color 0.5s;
 }
-
 .box:hover, .box:focus{
     box-shadow: var(--box-shadow-hover);
 }
 
 /* Język angielski */
-.box:first-child:hover, .box:first-child:focus{
-    border-bottom: 5px solid #ff3030;
-}
+.box:first-child:hover, .box:first-child:focus{ border-bottom: 5px solid #ff3030;}
 
 /* Język hiszpański */
-.box:nth-child(2):hover, .box:first-child:focus{
-    border-bottom: 5px solid #FFC500;
-}
+.box:nth-child(2):hover, .box:first-child:focus{ border-bottom: 5px solid #FFC500;}
 
 /* Język niemiecki */
-.box:nth-child(3):hover, .box:first-child:focus{
-    border-bottom: 5px solid #252525;
-}
+.box:nth-child(3):hover, .box:first-child:focus{ border-bottom: 5px solid #252525;}
 
 /* Język francuski */
-.box:nth-child(4):hover, .box:first-child:focus{
-    border-bottom: 5px solid #1b64d1;
-}
+.box:nth-child(4):hover, .box:first-child:focus{ border-bottom: 5px solid #1b64d1;}
 
 /* Język włoski */
-.box:nth-child(5):hover, .box:first-child:focus{
-    border-bottom: 5px solid #0f9751;
-}
+.box:nth-child(5):hover, .box:first-child:focus{ border-bottom: 5px solid #0f9751;}
 
 /* Zapowiedź innych języków */
-.box:nth-child(6){
-    background-color: #adadad69;
-}
+.box:nth-child(6){ background-color: #adadad69;}
 
 .box:nth-child(6):hover, .box:first-child:focus{
     transform: scale(1.05);
@@ -285,27 +285,16 @@ i + h4{
 }
 
 /* CONTACT TILE */
-
-.contact-tile{
-    height: auto;
-    width: 100vw;
-    padding: 5% 5% 1%;
-    margin-bottom: 1%;
-    background-color: #f7f7f72a;
-}
-
 .contact-container{
     height: auto;
     width: 100%;
     background-color: #fffdfd;
     display: flex;
     flex-wrap: wrap;
-    
     box-shadow: var(--box-shadow);
 }
 
 /* LEFT BOX */
-
 .left-box{
     padding: 3% 5%;
     background-color: #fdb14de6;
@@ -314,23 +303,15 @@ i + h4{
     position: relative;
 }
 
-#fa-paper-plane{
-    color:white;
-}
+i + span    { margin-left: 1em;}
+#fa-paper-plane { color:white;}
+#span-email { font-size: 0.9em;}
 
 .bottom-text{
     position: relative;
     margin-top: 20%;
     bottom: 0;
     padding-bottom: 5%;
-}
-
-i + span{
-    margin-left: 1em;
-}
-
-#span-email{
-    font-size: 0.9em;
 }
 
 .contact-hr{
@@ -358,18 +339,18 @@ i + span{
 }
 
 /* RIGHT BOX */
-
-form{
+.form{
     --main-color: #fbb75c;
     --secondary-color: #2196f3;
     --unselected-color: black;
     color: black;
-    width: 550px;
+    width: 86%;
     height: 100%;
+    padding: 5% 3%;
     font-family: 'Open Sans';
 }
 
-.justify{
+.form-justify-content{
     width: 100%;
     display:flex;
     flex-wrap: nowrap;
@@ -377,7 +358,7 @@ form{
     margin: 5% 0;
 }
 
-label{
+.form-label{
     font-weight: 600;
     letter-spacing: 2px;
 }
@@ -389,14 +370,13 @@ label{
     width: 70%;
     border-bottom: 2px solid var(--unselected-color);
 }
-
 .input:focus{
     border-bottom: 4px solid var(--secondary-color);
     outline-width: 0;
     margin: 12px 0;
 }
 
-#message{
+.form-text-area{
     height: 100%;
     width: 70%;
     border: 2px solid var(--unselected-color);
@@ -407,8 +387,7 @@ label{
     padding: 2px 15px;
     font-family: inherit;
 }
-
-#message:focus{
+.form-text-area:focus{
     border: 2px solid var(--secondary-color);
 }
 
@@ -427,12 +406,10 @@ label{
     color:white;
     font-weight: 600;
 }
-
 .btn-submit:active{
     position: relative;
     top: 3px;
 }
-
 
 /* FOOTER */
 footer {
