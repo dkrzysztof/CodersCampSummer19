@@ -52,15 +52,16 @@
   <!-- Górna płytka -->
   <div class="top-tile" id="top-tile">
         <div class="holder">
+          <div class="hidding-box"></div>
           <div id="title">International Talking School</div>
           <hr class="hr-style"/>
           <h3 id="text">Internetowe korepetycje z doświadczonymi nauczycielami, gotowymi zacząć naukę z tobą od zaraz!</h3>
-          <a class="btn btn-outline-danger btn-lg" href="#contact-form">Zaczynam naukę!</a>
+          <a class="btn btn-outline-danger btn-lg" href="#contact-form" id="button">Zaczynam naukę!</a>
         </div>
   </div>
 
   <!-- O nas  -->
-  <div class="about-tile" id="about-tile">
+  <div class="tile" id="about-tile">
     <div class="tile-title">
       O nas
     </div>
@@ -91,7 +92,7 @@
   <hr class="hr-style" id="offert-tile"/>
 
   <!-- Umiejętności -->
-  <div class="skill-tile" id="skill-tile">
+  <div class="tile" id="skill-tile">
     <div class="tile-title">Co gwarantujemy?</div>
     <div class="list-container row">
       <div class="col-lg list-element">
@@ -128,7 +129,7 @@
   <hr class="hr-style" id="offert-tile"/>
 
   <!-- Języki oferta -->
-  <div class="offert-tile">
+  <div class="tile">
     <!-- Tytuł -->
     <div class="tile-title">
       Nasza Oferta
@@ -150,7 +151,7 @@
   <hr class="hr-style" id="offert-tile"/>
 
   <!-- Formularz kontaktowy -->
-  <div class="contact-tile">
+  <div class="tile">
     <div class="tile-title" id="contact-form">
       Skontaktuj się z nami!
     </div>
@@ -174,9 +175,9 @@
           </div>
       </div>
       <div class="right-box">
-        <form autocomplete="off">
+        <form class="form" autocomplete="off">
           <div class="justify">
-              <label for="name">Name:</label> 
+              <label for="name">Imię:</label> 
               <input 
                   type="text" 
                   class="input" 
@@ -189,7 +190,7 @@
                   required>
           </div>
           <div class="justify">
-              <label for="surname">Surname:</label>    
+              <label for="surname">Nazwisko:</label>    
               <input 
                   type="text" 
                   class="input" 
@@ -214,7 +215,7 @@
                   required>    
           </div>
           <div class="justify" style="height:25%;">
-              <label for="message">Message:</label>    
+              <label for="message">Wiadomość:</label>    
               <textarea 
                   type="text" 
                   class="input" 
