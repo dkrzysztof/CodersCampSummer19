@@ -8,7 +8,7 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 10%;
+    padding-top: 15%;
     padding-bottom: 100px;
     display: flex;
     justify-content: center;
@@ -33,7 +33,7 @@
 
 .tile-title{
     width: fit-content;
-    margin: 2% auto 4% 1em;
+    margin: 2% auto 4% 5%;
     padding: 2% 4% 1.5%;
     font-size: 2.2rem;
     font-family: 'Crete Round', serif;
@@ -108,6 +108,13 @@
     #fourth-container   { width: 31%; }
     #fifth-container    { width: 33%; }
     #sixth-container    { width: 30%; }
+    
+    .form-justify-content{
+        flex-wrap: nowrap;
+        margin-top: 0;
+    }
+    .input  { width: 70%; }
+    .form-text-area { width: 70%; }
 }
 @media (max-width: 1100px){
     .contact-container{
@@ -119,12 +126,21 @@
     .right-box{
         height: auto;
         margin-bottom: 10%;
+        margin-top: 8%;
     }
 
     div.about-body > div{
         width: 100%;
         padding: 15%;
     }
+
+    .form-justify-content{
+        flex-wrap: wrap;
+        margin-top: 10%;
+    }
+
+    .input{ width:100%; }
+    .form-text-area{ width:100%; }
 }
 
 #title{
@@ -369,9 +385,8 @@ i + span    { margin-left: 1em;}
 .form-justify-content{
     width: 100%;
     display:flex;
-    flex-wrap: nowrap;
     justify-content: space-between;
-    margin: 5% 0;
+    margin-bottom: 5%;
 }
 
 .form-label{
@@ -383,7 +398,6 @@ i + span    { margin-left: 1em;}
     background-color: transparent;
     border:none;
     transition: 0.3s ease;
-    width: 70%;
     border-bottom: 2px solid var(--unselected-color);
 }
 .input:focus{
@@ -394,7 +408,6 @@ i + span    { margin-left: 1em;}
 
 .form-text-area{
     height: 100%;
-    width: 70%;
     border: 2px solid var(--unselected-color);
     background-color: transparent;
     resize: none;
