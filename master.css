@@ -27,9 +27,6 @@ li.nav-item{
     margin: 0 15px;
 }
 
-div.dropdown-menu{
- font-size: 1em;
-}
 
 .holder{
     background-color: rgba(255,255,255,0.9);
@@ -37,7 +34,7 @@ div.dropdown-menu{
     height: auto;
     top: 0;
     margin: 50px 30% auto; 
-    padding: 30px 50px;
+    padding: 30px 40px;
     border-radius: 30px;
 }
 
