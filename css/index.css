@@ -33,7 +33,7 @@
 
 .tile-title{
     width: fit-content;
-    margin: 2% auto 4% 1em;
+    margin: 2% auto 4% 5%;
     padding: 2% 4% 1.5%;
     font-size: 2.2rem;
     font-family: 'Crete Round', serif;
@@ -56,6 +56,10 @@
     .about-body{
         font-size: 1.4rem;
         text-align: justify;
+    }
+
+    .box:nth-child(6){
+        /* width: 100%; */
     }
 }
 
@@ -93,11 +97,11 @@
 @media (min-width: 1100px){
     .left-box{
         height: auto;
-        width: 40%;
+        width: 42%;
     }
     .right-box{
         height: auto;
-        width: 60%;
+        width: 58%;
     }
     form{
         padding-top: 10%;
@@ -108,23 +112,53 @@
     #fourth-container   { width: 31%; }
     #fifth-container    { width: 33%; }
     #sixth-container    { width: 30%; }
+    
+    .form-justify-content{
+        flex-wrap: nowrap;
+        margin-top: 0;
+    }
+    
+    .input  { width: 70%; }
+    .form-text-area { width: 68%; }
+
+    .form-justify-content .form-text-area{
+        height: 250px;
+    }
 }
+
 @media (max-width: 1100px){
     .contact-container{
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .left-box{
-        height: auto;
+        height: 50%;
     }
     .right-box{
-        height: auto;
+        height: 50%;
         margin-bottom: 10%;
+        margin-top: 8%;
     }
 
     div.about-body > div{
         width: 100%;
         padding: 15%;
     }
+
+    .form-justify-content{
+        flex-wrap: wrap;
+        margin-top: 3%;
+    }
+    .form-justify-content .form-text-area{
+        height: 400px;
+    }
+
+    .form-text-area{ 
+        width: 100%;
+        height: 200px;
+    }
+    .input{ width:100%; }
+
+
 }
 
 #title{
@@ -218,6 +252,7 @@
 /* skill tile */
 .list-container{
     margin: 5% auto 5px;
+    padding: 1.5rem;
     background-color: white;
     box-shadow: var(--box-shadow);
     width: auto;
@@ -256,14 +291,13 @@ i + h4{
     margin: 0 2%;
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .box{
     width: 300px;
     height: 300px;
-    margin-left: 15px;
-    margin-bottom: 50px;
+    margin: 5%;
     display: flex;
     font-size: 2em;
     text-align: center;
@@ -363,15 +397,20 @@ i + span    { margin-left: 1em;}
     width: 86%;
     height: 100%;
     padding: 5% 3%;
+    display: flex;
+    flex-wrap: wrap;
     font-family: 'Open Sans';
 }
 
 .form-justify-content{
     width: 100%;
     display:flex;
-    flex-wrap: nowrap;
     justify-content: space-between;
-    margin: 5% 0;
+    margin-bottom: 4%;
+}
+.form-justify-content h2{
+    text-align: center;
+    margin: 0 auto;
 }
 
 .form-label{
@@ -383,29 +422,37 @@ i + span    { margin-left: 1em;}
     background-color: transparent;
     border:none;
     transition: 0.3s ease;
-    width: 70%;
     border-bottom: 2px solid var(--unselected-color);
+    padding: 12px 0;
+    margin: 0;
 }
 .input:focus{
     border-bottom: 4px solid var(--secondary-color);
     outline-width: 0;
     margin: 12px 0;
+    padding: 0;
 }
 
 .form-text-area{
-    height: 100%;
-    width: 70%;
+    height: 90%;
+    /* padding: 2px 15px; */
     border: 2px solid var(--unselected-color);
     background-color: transparent;
     resize: none;
     border-radius: 5px;
     font-size: 0.98em;
-    padding: 2px 15px;
     font-family: inherit;
     outline-width: 0;
+    transition: 0.3s ease;
+    padding: 12px 5px 20px;
+    margin: 0;
+    box-sizing: content-box;
+    
 }
 .form-text-area:focus{
-    border: 2px solid var(--secondary-color);
+    border: 4px solid var(--secondary-color);
+    margin: 0 0 12px;
+    padding: 12px 5px 8px;
 }
 
 .btn-submit{
@@ -417,11 +464,16 @@ i + span    { margin-left: 1em;}
     font-size: 1.3em;
     outline-width: 0;
     transition: 0.4s ease;
+    margin: 20px 0 16px;
+    padding: 8px 0;
+    box-sizing: content-box;
 }
 .btn-submit:hover, .btn-submit:focus{
     background-color: var(--main-color);
     color:white;
     font-weight: 600;
+    padding: 16px 0; 
+    margin: 20px 0 0; 
 }
 .btn-submit:active{
     position: relative;

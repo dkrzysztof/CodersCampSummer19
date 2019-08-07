@@ -29,20 +29,20 @@
       <div class="collapse navbar-collapse" id="collapsingItems">
         <ul class="navbar-nav mr-auto justify-content-center">
           <li class="nav-item">
-            <a class="nav-link" href="#top-tile">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link navbar-brand" style="padding: 0.3125rem" href="#top-tile">Start<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#about-tile">O nas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#skill-tile">Co gwarantujemy?</a>
+            <a class="nav-link" href="#skill-tile">Co gwarantujemy?</a> 
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#offert-tile" >Oferta</a>
           </li>
         </ul>
         <ul class="navbar-nav navbar-right">
-          <li class="nav-item nav-active"><a class="nav-link" href="#contact-tile">Kontakt</a></li>
+          <li class="nav-item nav-active"><a class="navbar-brand nav-link" href="#contact-tile"><b>Kontakt</b></a></li>
         </ul>
       </div>
     </div>
@@ -156,9 +156,9 @@
     </div>
     <div class="contact-container">
       <div class="left-box">
+        <div class="top-text">
           <i class="far fa-paper-plane fa-3x" id="fa-paper-plane"></i>
           <hr class="contact-hr">
-          <div class="top-text">
             Jeśli jesteś ambitna/y, pracowita/y i zmotywowana/y do pracy, skontaktuj się z nami,
             a pokażemy Ci jak w sposób szybki, łatwy i przyjemny nauczyć się języka.
           </div>
@@ -175,13 +175,14 @@
       </div>
       <div class="right-box">
         <form class="form" autocomplete="off">
+          <div class="form-justify-content"><h2>Formularz kontaktowy</h2></div>
           <div class="form-justify-content">
               <label class="form-label" for="name">Imię:</label> 
               <input 
                   type="text" 
                   class="input" 
                   id="name" 
-                  placeholder="Your name" 
+                  placeholder="Twoje imię"
                   onfocus="highligh_text(event)" 
                   onfocusout="unhighlight_text(event)"
                   name="fname"
@@ -194,7 +195,7 @@
                   type="text" 
                   class="input" 
                   id="surname" 
-                  placeholder="Your surname" 
+                  placeholder="Twoje nazwisko" 
                   onfocus="highligh_text(event)"
                   onfocusout="unhighlight_text(event)"
                   name="lname"
@@ -207,20 +208,20 @@
                   type="email" 
                   class="input" 
                   id="email" 
-                  placeholder="Your email" 
+                  placeholder="Twój email" 
                   onfocus="highligh_text(event)" 
                   onfocusout="unhighlight_text(event)"
                   tabindex="3"
                   required>    
           </div>
-          <div class="form-justify-content" style="height:25%;">
+          <div class="form-justify-content">
               <label class="form-label" for="message">Wiadomość:</label>    
               <textarea 
                   type="text" 
                   class="form-text-area" 
                   id="message"
                   class="form-text-area"
-                  placeholder="Your message" 
+                  placeholder="Twoja wiadomość" 
                   onfocus="highligh_text(event)" 
                   onfocusout="unhighlight_text(event)"
                   tabindex="4" 
