@@ -464,20 +464,23 @@ i + span    { margin-left: 1em;}
     font-size: 1.3em;
     outline-width: 0;
     transition: 0.4s ease;
-    margin: 20px 0 16px;
-    padding: 8px 0;
+    margin: 5px 0 10px;
+    padding: 0;
     box-sizing: content-box;
 }
 .btn-submit:hover, .btn-submit:focus{
     background-color: var(--main-color);
     color:white;
     font-weight: 600;
-    padding: 16px 0; 
-    margin: 20px 0 0; 
+    padding: 5px 0; 
+    margin: 0 0 5px; 
 }
 .btn-submit:active{
     position: relative;
     top: 3px;
+}
+.btn-submit::after{
+    content: "Prześlij"
 }
 
 /* FOOTER */

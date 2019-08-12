@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'"> -->
   <title>International talking School</title>
 
   <!-- żródła strony -->
@@ -185,9 +186,10 @@
                   placeholder="Twoje imię"
                   onfocus="highligh_text(event)" 
                   onfocusout="unhighlight_text(event)"
-                  name="fname"
+                  name="name"
                   tabindex="1"
-                  required>
+                  autocomplete="first-name"
+                  >
           </div>
           <div class="form-justify-content">
               <label class="form-label" for="surname">Nazwisko:</label>    
@@ -198,9 +200,9 @@
                   placeholder="Twoje nazwisko" 
                   onfocus="highligh_text(event)"
                   onfocusout="unhighlight_text(event)"
-                  name="lname"
+                  name="surname"
                   tabindex="2"
-                  required>
+                  >
           </div>
           <div class="form-justify-content">
               <label class="form-label" for="email">Email:</label> 
@@ -211,8 +213,9 @@
                   placeholder="Twój email" 
                   onfocus="highligh_text(event)" 
                   onfocusout="unhighlight_text(event)"
+                  name="email"
                   tabindex="3"
-                  required>    
+                  >    
           </div>
           <div class="form-justify-content">
               <label class="form-label" for="message">Wiadomość:</label>    
@@ -224,11 +227,12 @@
                   placeholder="Twoja wiadomość" 
                   onfocus="highligh_text(event)" 
                   onfocusout="unhighlight_text(event)"
+                  name="message"
                   tabindex="4" 
                   autocomplete="off"
-                  required></textarea>
+                  ></textarea>
           </div>
-          <input class="btn-submit" tabindex="4" type="submit">
+          <input onClick="send_mail()" class="btn-submit" tabindex="4" type="button" value="Prześlij">
       </form>
       </div>
     </div>
@@ -240,7 +244,7 @@
     Autor strony: Krzysztof Dydak. Wszystkie prawa zastrzeżone.
     </p>
   </footer>
-  <script src="./scripts/master.js"></script>
+  <script type="text/javascript" src="./scripts/master.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>

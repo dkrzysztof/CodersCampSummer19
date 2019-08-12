@@ -16,8 +16,7 @@ module.exports = {
     "ui": {
         "port": 3001
     },
-    "tunnel": "its-dev2",
-    "files": [],
+    "files": ['scripts/master.js'],
     "watchEvents": [
         "change"
     ],
@@ -50,7 +49,7 @@ module.exports = {
     "rewriteRules": [],
     "open": "local",
     "browser": "default",
-    "cors": false,
+    "cors": true,
     "xip": false,
     "hostnameSuffix": false,
     "reloadOnRestart": false,
