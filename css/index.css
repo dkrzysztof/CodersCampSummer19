@@ -103,6 +103,9 @@
         height: auto;
         width: 58%;
     }
+    /* CODE_REVIEW zdaję sobie sprawę, że masz jeden form na stronie, ale lepiej nie stylować globalnie po tagach.
+    Znacznie lepiej jest dawać dodatkową klasę. Stylowanie po tagach powinno się ograniczać do bardzo ogólnych zasad
+    np. wszystkie linki na stronie mają być zielone */
     form{
         padding-top: 10%;
     }
@@ -160,7 +163,7 @@
 
 
 }
-
+/* CODE_REVIEW stylowania po id powinno się unikać - takie stylowanie nie jest reużywalne i trudno je nadpisać z poziomu js*/
 #title{
     font-family: 'Crete Round', serif;
     text-align: center;
@@ -278,6 +281,8 @@ div.list-element{
     font-size: 0.9em;
 }
 
+/* CODE_REVIEW strasznie rypnięty selektor, serio lepiej używać jakichś klas w takim miejscu, bo można się zdziwić
+później */
 i + h4{
     margin: 1.25em 0 0.5em;
 }
@@ -310,6 +315,8 @@ i + h4{
 .box:hover, .box:focus{
     box-shadow: var(--box-shadow-hover);
 }
+
+/* CODE_REVIEW skoro 5px i solid są wspólne, to można je wpisać raz, np. używając border-bottom-style */
 
 /* Język angielski */
 .box:first-child:hover, .box:first-child:focus{ border-bottom: 5px solid #ff3030;}
@@ -389,6 +396,8 @@ i + span    { margin-left: 1em;}
 }
 
 /* RIGHT BOX */
+
+/* CODE_REVIEW  */
 .form{
     --main-color: #fbb75c;
     --secondary-color: #2196f3;

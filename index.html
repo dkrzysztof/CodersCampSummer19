@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl" dir="ltr">
-
+<!-- CODE_REVIEW head jest wewnątrz html, więc powinno być tu wcięcie -->
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,6 +15,7 @@
   <link rel="icon" href="./images/logo-blue.png" type="image/png">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
+<!-- CODE_REVIEW wtf, gdzie jest body?! -->
 
 <br>
   <!-- Pasek nawigacyjny -->
@@ -22,6 +23,16 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
       <a class="navbar-brand" href="#top-tile"><img src="images/logo_min.png" id="logo" /></a>
+      <!-- CODE_REVIEW ten button możnaby zapisać w kilku liniach: -->
+      <!-- <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-toggle="collapse" 
+        data-target="#collapsingItems" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation"
+      >< -->
+      <!-- jest czytelniej? -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingItems" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,6 +40,7 @@
       <div class="collapse navbar-collapse" id="collapsingItems">
         <ul class="navbar-nav mr-auto justify-content-center">
           <li class="nav-item">
+            <!-- CODE_REVIEW zagnieżdżone tagi powinny tutaj znaleźć się w kolejnych liniach -->
             <a class="nav-link navbar-brand" style="padding: 0.3125rem" href="#top-tile">Start<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
@@ -65,6 +77,7 @@
       O nas
     </div>
     <div class="about-body">
+      <!-- CODE_REVIEW nazwa klasy ccontainer - nie podoba mi się, wydaje mi się, że niewiele mówi -->
       <div class="ccontainer about-box" id="first-container"><span class="title-in-text">International Talking School</span> to szkoła stworzona z pasji do uczenia się i nauczania języków obcych. <br> <br> Jej planem jest zrzeszać ludzi z całego świata by robili to, co potrafią i kochają najbardziej, czyli <strong> nauczanie języków obcych</strong> oraz <strong>tłumaczenie pisemne i ustne</strong></div>
       <div class="ccontainer about-box" id="second-container"></div>
       <div class="ccontainer about-box" id="third-container">
@@ -82,6 +95,7 @@
       <div class="ccontainer about-box" id="fourth-container"></div>
       <div class="ccontainer about-box" id="fifth-container">
           <span class="title-in-text">Każdemu uczniowi</span> 
+          <!-- CODE_REVIEW jako, że białe znaki nie mają za dużego znaczenia w html, to przełamałbym test niżej -->
           tworzymy i udostępniamy indywidualną stronę, gdzie otrzymuje dodatkowe materiały odnoszące się do zajęć (słuchanie, gramatyka, słownictwo, czytanie, pisanie).<br/><br/> Jeśli w trakcie przerabiania dodatkowych materiałów napotkasz jakiś problem czy wątpliwość to zawsze masz możliwość skontaktowania się z lektorem, który na pewno pomoże.
       </div>
       <div class="ccontainer about-box" id="sixth-container"></div>
@@ -178,6 +192,7 @@
           <div class="form-justify-content"><h2>Formularz kontaktowy</h2></div>
           <div class="form-justify-content">
               <label class="form-label" for="name">Imię:</label> 
+              <!-- CODE_REVIEW znasz już js i chyba już wiesz, że niekoniecznie tak powinno się podłączać listenery :P -->
               <input 
                   type="text" 
                   class="input" 
@@ -246,3 +261,17 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/12722d3b6e.js"></script>
 </html>
+
+<!-- CODE_REVIEW -->
+<!-- Bardzo mało tagów semantycznych w kodzie. -->
+<!-- Trochę mało animacji, ale nie jest źle -->
+<!-- Przy bardzo wąskich ekranach strona wygląda całkiem słabo - jest jakaś krzywa -->
+<!-- Z jakiegoś powodu na urządzeniach mobilnych można przesuwać stronę horyzontalnie -->
+<!-- Oprócz tego strona bardzo ładna i schludna. Podoba mi się. -->
+<!-- Podobają mi się te inputy w formularzu, bardzo spoko -->
+
+<!-- Code quality:  8.5/10
+  Design quality:   9/10
+  Business quality: 10/10
+  Features quality: 10/10
+  RAZEM:  37.5/40-->
